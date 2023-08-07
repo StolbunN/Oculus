@@ -1,0 +1,58 @@
+// кнопка с градиентом
+.btn
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 1.6rem
+    border: 1px solid
+    border-image-slice: 1
+    border-image-source: $gradient
+    cursor: pointer
+    &__buy
+        display: inline-block
+        padding: 2.1rem 11.1rem
+        color: white
+        background: $gradient
+    &__price
+        display: inline-block
+        padding: 2.1rem 10.6rem
+        background: transparent
+    &__gragient-text
+        display: inline-block
+        padding: 1.6rem 4.8rem
+        background: $gradient
+        background-clip: text
+        color: transparent
+        @include respond(min-phone)
+            font-size: 2.5rem
+    &_width
+        @include respond(min-phone)
+            display: flex
+            flex-direction: column
+            max-width: 31rem
+
+.button
+    display: inline-block
+    width: 5rem
+    height: 5rem
+    border: none
+    border-radius: 50%
+    text-transform: uppercase
+    cursor: pointer
+    font-size: 1.5rem
+    &_gray
+        background: #CACAD6
+        font-weight: 700
+        color: $color-gray
+    &_play
+        background: white
+        position: static
+        transform: translate(0, 0)
+        margin-bottom: 1rem
+
+.icon-play
+    font-size: 1.5rem
+    background: $gradient
+    background-clip: text
+    color: transparent
+    padding-left: .3rem

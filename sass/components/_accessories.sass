@@ -1,0 +1,63 @@
+.accessories
+    margin-bottom: 10rem
+    &__title-2
+        margin-bottom: 3rem
+    &__title-3
+        margin-bottom: 3rem
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        @include respond(tab-port)
+            grid-template-columns: repeat(2, 1fr)
+            gap: 3rem
+        @include respond(min-phone)
+            grid-template-columns: 1fr
+    &__card
+        border: 1px solid
+        border-image-slice: 1
+        border-image-source: $gradient
+        padding: 2rem
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__card-img
+        margin-bottom: 1rem
+    &__card-title
+        font-size: 2.4rem
+        font-weight: 400
+        color: black
+        margin-bottom: 1rem
+        @include respond(tab-port)
+            font-size: 3.6rem
+    &__card-text
+        margin-top: auto
+        @include respond(tab-port)
+            font-size: 2.4rem
+    &__card-price
+        margin-bottom: 2rem
+        color: black
+        font-weight: 700
+        margin-top: 4rem
+        @include respond(tab-port)
+            font-size: 2.4rem
+.accessories .btn
+        width: 100%
+        text-align: center
+        padding: .6rem 0
+        background: linear-gradient(145deg, transparent 0%, transparent 50%, #BC10D8 50%, rgba(80, 0, 250, 0.93) 100%)
+        background-size: 250%
+        transition: all .5s
+        border: 1px solid
+        border-image-slice: 1
+        border-image-source: linear-gradient(145deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+        @include respond(tab-port)
+            padding: 1.6rem 0
+        & .btn__gragient-text
+            padding: 0
+            transition: all .5s
+
+.accessories .btn:hover
+    background-position: 100%
+
+.accessories .btn:hover .btn__gragient-text
+    color: white

@@ -1,0 +1,53 @@
+@font-face
+  font-family: 'Helvetica'
+  src: url('../fonts/Helvetica.ttf') format('truetype'), url('../fonts/helvetica.woff2') format('woff2')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'Helvetica-Bold'
+  src: url('../fonts/Helvetica-Bold.ttf') format('truetype'), url('../fonts/helvetica-bold.woff2') format('woff2')
+  font-weight: 700
+  font-style: normal
+
+
+body
+  font-family: 'Helvetica', sans-serif
+  font-size: 1.6rem
+  color: $color-gray
+
+.title-2
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 1.6rem
+  @include respond(min-phone)
+    font-size: 2.4rem
+.title-3
+  text-transform: uppercase
+  font-size: 3.6rem
+  font-weight: 400
+  background: $gradient
+  background-clip: text
+  color: transparent
+  @include respond(min-phone)
+    font-size: 4rem
+.title-4
+  font-size: 2.4rem
+  font-weight: 400
+
+.preview
+  &__title
+    font-size: 9.6rem
+    font-weight: 400
+    margin-bottom: 1rem
+  &__subtitle
+    font-size: 3.6rem
+    font-weight: 400
+    margin-bottom: .5rem
+  &__text
+    font-size: 1.3rem
+    margin-bottom: 5rem
+
+.btn-caption
+  font-size: 1.3rem
+  margin-bottom: 1rem

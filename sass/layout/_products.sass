@@ -1,0 +1,85 @@
+.products
+    padding: 10rem 0
+    &__title
+        display: flex
+        margin-bottom: 2rem
+        gap: 4rem
+        @include respond(phone)
+            display: block
+            margin-bottom: 3rem
+    &__title-2
+        width: 26rem
+        @include respond(phone)
+            margin-bottom: 2rem
+    &__title-3
+        max-width: 33rem
+        @include respond(phone)
+            max-width: 100%
+    &__about
+        display: grid
+        grid-template-columns: 26rem 1fr
+        column-gap: 4rem
+    &__list
+        grid-row: 1 / -1
+        @include respond(phone)
+            grid-row: 1 / 2
+            grid-column: 1 / -1
+            display: grid
+            grid-template-columns: repeat(2, 25rem)
+            grid-template-rows: repeat(3, 1fr)
+            justify-content: center
+            grid-auto-flow: column
+    &__item
+        cursor: pointer
+        font-weight: 700
+        transition: all .2s
+        &:hover
+            color: black
+            transform: scale(1.05)
+        &:not(:last-child)
+            margin-bottom: 2rem
+            @include respond(horiz-tel)
+                margin-bottom: 4rem
+        @include respond(phone)
+            font-size: 2rem
+    &__background
+        grid-row: 1 / -1
+        height: 100%
+        object-fit: cover
+        @include respond(horiz-tel)
+            display: none
+    &__descr
+        @include respond(horiz-tel)
+            grid-column: 1 / -1
+    &__text
+        margin-bottom: 4rem
+        line-height: 2rem
+        @include respond(phone)
+            margin-bottom: 1rem
+        @include respond(min-phone)
+            font-size: 2rem
+    &__video
+        background: url(../images/products_video.png) center / cover no-repeat
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 1rem
+        @include respond(horiz-tel)
+            grid-column: 1 / -1
+    &__video-text
+        color: #F6F4F5
+.active--item
+    color: black
+
+.product
+    display: none
+    grid-template-columns: 2fr 1fr
+    grid-template-rows: max-content 1fr
+    column-gap: 4rem
+    @include respond(horiz-tel)
+        grid-template-rows: max-content 30rem
+    @include respond(phone)
+        grid-column: 1 / -1
+
+.product_active
+    display: grid

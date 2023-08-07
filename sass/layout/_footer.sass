@@ -1,0 +1,30 @@
+.footer
+    padding: 3rem 0
+    margin-bottom: 4.5rem
+    border-top: 1px solid $color-gray
+    border-bottom: 1px solid $color-gray
+    &__menu .menu__item
+        &:not(:last-child)
+            @include respond(horiz-tel)
+                display: none
+
+
+
+.social-media a
+    display: inline-block
+    &:not(:last-child)
+        margin-right: 2rem
+.social-media
+    justify-self: end
+    @include respond(phone)
+        justify-self: center
+
+
+.footer-nav
+    display: grid
+    grid-template-columns: 1fr min-content 1fr
+    align-items: center
+    @include respond(phone)
+        grid-template-columns: none
+        row-gap: 3rem
+        justify-items: center

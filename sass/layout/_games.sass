@@ -1,0 +1,67 @@
+.games
+    margin-bottom: 10rem
+    &__inner
+        display: grid
+        grid-template-columns: 1fr 3fr
+        @include respond(tab-port)
+            grid-template-columns: none
+            row-gap: 3rem
+    &__inner-left
+        padding-right: 2rem
+    &__title-2
+        margin-bottom: 5rem
+    &__title-3
+        margin-bottom: 1rem
+    &__text
+        margin-bottom: 3rem
+        @include respond(min-phone)
+            font-size: 2rem
+
+
+
+    &__cards
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        @include respond(phone)
+            grid-template-columns: none
+            gap: 3rem
+    &__card
+        padding: 2rem 1.5rem
+        border: 1px solid
+        border-image-slice: 1
+        border-image-source: $gradient
+        display: flex
+        flex-direction: column
+    &__card-img
+        margin-bottom: 1rem
+    &__card-title
+        color: black
+        font-size: 2.4rem
+        font-weight: 400
+        margin-bottom: 1rem
+        @include respond(min-phone)
+            font-size: 3rem
+    &__card-descr
+        margin-bottom: 4rem
+        @include respond(tab-port)
+            font-size: 2rem
+        @include respond(min-phone)
+            font-size: 2.5rem
+    &__card-link
+        &:link, &:visited
+            display: inline-block
+            color: transparent
+            background: $gradient
+            background-clip: text
+            margin-top: auto
+            transition: all .1s
+            @include respond(tab-port)
+                font-size: 2rem
+            @include respond(min-phone)
+                font-size: 2.5rem
+        &:hover, &:active
+            transform: scale(1.05) translateX(1rem)
+            @include respond(phone)
+                transform: scale(1.2) translateX(6.5rem)
+            @include respond(min-phone)
+                transform: scale(1.1) translateX(3.5rem)
